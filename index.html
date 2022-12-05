@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CASA DE CAMBIO</title>
+    <script>
+        function convertir(){
+            function convertir(){
+                var valore = parseInt(document.getElementById(valor).value);
+                var resultado = 0;
+                var dolar = 350;
+                var euro = 400;
+                if (document.getElementById("uno").checked){
+                    resultado = valore / dolar;
+                    alert("El cambio de Pesos a Dolares es: $" + resultado);
+                }
+                 else if (document.getElementById (dos).checked){
+                    resultado = valore / euro;
+                    alert("El cambio de Pesos a Euro es: " + resultado);
+                 }     
+                 else{
+                    alert("Debes completar todos los requerimientos")
+                 }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="index.js">
+</head>
+<body>
+    <h3>Casa de cambio</h3>
+    <form class="formulario">
+        <p>Seleccionar moneda</p>
+        <input type="radio" name="cambio" id="uno">Dolar
+        <input type="radio" name="cambio" id="dos">Euro
+        <p>INGRESE MONTO</p>
+        <input type="number" id="valor" min="1" max="100000">
+        <input type="button" id="cotizador" value="Cotizar" onclick="convertir()">
+    </form>
+</body>
+</html>
